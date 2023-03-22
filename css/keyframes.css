@@ -12,6 +12,13 @@ img {
 	animation: stretchMe 2s;
 }
 
+.infiniteRotate {
+	animation: rotateMe infinite 2s linear;
+}
+.alternateTransform {
+	animation: transformMe infinite alternate 1.5s ease-in-out;
+}
+
 @keyframes animateIn {
 	0% {
 		opacity: 0;
@@ -39,5 +46,28 @@ img {
 	}
 	75% {
 		transform: scaleX(2);
+	}
+}
+
+@keyframes rotateMe {
+	100% {
+		rotate: 0.5 0.75 0.25 1turn;
+	}
+}
+
+@keyframes transformMe {
+	0% {
+		translate: -2rem 1rem;
+		rotate: -0.1turn;
+		scale: 0.5;
+	}
+
+	50% {
+		scale: 1;
+	}
+	100% {
+		translate: 2rem 1rem;
+		rotate: 0.1turn;
+		scale: 0.5;
 	}
 }

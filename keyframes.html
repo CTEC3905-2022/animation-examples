@@ -24,6 +24,25 @@
 		<main>
 			<p>
 				Using <code>@keyframes</code> we can animate elements.
+				This typically applies as soon as the element is loaded.
+			</p>
+			<section>
+				<figure class="animateIn clicked">
+					<figcaption>A random collection of moves</figcaption>
+					<img src="https://placekitten.com/400/200" alt="kitten1">
+				</figure>
+				<figure class="stretchMe clicked">
+					<figcaption>Stretchy</figcaption>
+					<img src="https://placekitten.com/400/200" alt="kitten1">
+				</figure>
+			</section>
+			<h2>Triggering animations repeatedly</h2>
+			<p>
+				If we animate based on a class, we can trigger the animation on demand.
+				For example, by toggling the class on the <code>click</code> event.
+			</p>
+			<p>
+				If we want to trigger the animation again, we can remove the class on the <code>animationend</code> event.
 			</p>
 			<section>
 				<figure class="animateIn clickable">
@@ -34,14 +53,27 @@
 					<figcaption>Stretchy</figcaption>
 					<img src="https://placekitten.com/400/200" alt="kitten1">
 				</figure>
-
 			</section>
 			<p>
-				Once it is finished, clicking the section will restart the animation.
+				Once the animation is finished, clicking the section will restart the animation.
+			</p>
+			<h2>Infinite and alternate</h2>
+			<p>
+				Setting the <code>animation-iteration-count</code> to <code>infinite</code> we can animate elements infinitely.
 			</p>
 			<p>
-				This is because we animate based on a class which we add on the <code>click</code> event and remove on the <code>animationend</code> event.
+				Setting the <code>animation-direction</code> to <code>alternate</code> we can animate elements back and forth.
 			</p>
+			<section>
+				<figure class="infiniteRotate">
+					<figcaption>Infinite</figcaption>
+					<img src="https://placekitten.com/400/200" alt="kitten1">
+				</figure>
+				<figure class="alternateTransform">
+					<figcaption>Infinite and alternate</figcaption>
+					<img src="https://placekitten.com/400/200" alt="kitten1">
+				</figure>
+			</section>
 		</main>
 		<script src="js/scripts.js"></script>
 		<script src="js/keyframes.js"></script>
